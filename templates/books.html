@@ -5,11 +5,22 @@
     <title>Title</title>
 </head>
 <body>
-
-{% for book in books %}
-    <p>{{ book.name }}{{ book.author }}{{ book.price }}</p>
+<table>
+    <thead>
+        <th>书名</th>
+        <th>作者</th>
+        <th>价格</th>
+    </thead>
+    <tbody>
+    {% for book in books %}
+        <tr>
+            <td>{{ book.name }}</td>
+            <td>{{ book.author }}</td>
+            <td>{{ book.price }}</td>
+        </tr>
 {% endfor %}
-
+    </tbody>
+</table>
 
 </body>
 </html>
