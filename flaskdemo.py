@@ -95,6 +95,23 @@ def books():
     return render_template('books.html',books=books)
 
 
+@app.route('/filterdemo')
+def filterdemo():
+    imgUrl = 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1522753318509&di=e35fef350de5803728159c95f32433c8&imgtype=0&src=http%3A%2F%2Fi2.hdslb.com%2Fbfs%2Fface%2F36d18e3cc1a29811ae3c8f6bd3a479169e3452cc.jpg'
+    comments = [
+        {
+            'name':'1'
+        },{
+            'name':'2'
+        },{
+            'name':'3'
+        }
+    ]
+    return render_template('filterdemo.html',imgUrl=imgUrl,comments=comments)
+    # return render_template('filterdemo.html')
+
+
+
 @app.route('/demo/<id>')
 def demo(id):
     return '您请求的参数是 %s' % id
